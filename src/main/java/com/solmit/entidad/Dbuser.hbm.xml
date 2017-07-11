@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11/07/2017 10:40:20 AM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.solmit.entidad.Dbuser" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="DBUSER">
+        <id name="userId" type="int">
+            <column name="USER_ID" precision="5" scale="0"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="username" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="USERNAME" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="createdBy" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="CREATED_BY" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="createdDate" optimistic-lock="true" type="date" unique="false">
+            <column length="7" name="CREATED_DATE" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
